@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #0077b5; 
+    --secondary-color: #333;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+    --indigo: #5a67d8;
+}
+
+/* 1. CORRECCIÓN DEL BODY (Permite que la página crezca hacia abajo) */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    line-height: 1.6;
+    display: block; /* Cambiado de flex a block */
+}
+
+/* 2. TU TARJETA DE PERFIL (La principal de arriba) */
+.card-profile { 
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+    margin: 2rem auto; /* La centra solita */
+}
+
+/* 3. SECCIÓN PROYECTOS */
+.seccion {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto-centro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+/* 4. TARJETA DE PROYECTO (Asegurando el tamaño) */
+.proyecto {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #edf2f7;
+}
+
+/* 5. EL CONTENEDOR QUE DOMA LAS IMÁGENES */
+.img-container {
+    width: 100% !important;
+    height: 160px !important; /* Espacio para la imagen */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #f8f9fa;
+    padding: 20px !important;
+}
+
+.img-container img {
+    max-width: 130px !important; /* AQUÍ CONTROLAS EL TAMAÑO FINAL */
+    max-height: 110px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.proyecto:hover img {
+    transform: scale(1.1);
+}
+
+/* 6. BOTONES Y TEXTOS */
+.proyecto h3 {
+    text-align: center;
+    margin: 1.2rem 1rem 0.5rem;
+    color: #2d3748;
+}
+
+.proyecto p {
+    padding: 0 1.5rem;
+    color: #718096;
+    font-size: 0.9rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.tech {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.tech span {
+    background: #ebf4ff;
+    color: #3182ce;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.proyecto-footer {
+    padding: 1.5rem;
+}
+
+.btn-proyecto {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--indigo);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
